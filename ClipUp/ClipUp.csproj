@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Services\" />
+    <Folder Include="Shared\Objects\Models\" />
+    <Folder Include="Shared\Objects\Enums\" />
+    <Folder Include="Shared\Tools\Exceptions\" />
+    <Folder Include="Shared\Objects\ViewModels\" />
+    <Folder Include="Shared\Tools\ValidationAttributes\" />
+    <Folder Include="Shared\Objects\DTOs\" />
+    <Folder Include="Shared\Objects\Interfaces\" />
+    <Folder Include="Shared\Tools\Attributes\" />
+  </ItemGroup>
+
+</Project>
