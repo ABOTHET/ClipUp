@@ -1,6 +1,87 @@
 @ClipUp_HostAddress = http://localhost:5113
 
-GET {{ClipUp_HostAddress}}/weatherforecast/
+GET {{ClipUp_HostAddress}}/api/Videos
 Accept: application/json
+
+###
+
+POST {{ClipUp_HostAddress}}/api/Authentication/Login
+Accept: application/json
+Content-Type: application/json
+
+{
+  "Email": "lolpop@mail.ru",
+  "Password": "password"
+}
+
+###
+
+POST {{ClipUp_HostAddress}}/api/Pictures/45d3cf3d-4750-41de-9168-40c7e0fd204e
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJJZCI6ImZmNWFmZmY5LTdkNzMtNGNiMi05Y2FlLWQ3NzJhNmVhZGU1NiIsIkVtYWlsIjoibG9scG9wQG1haWwucnUiLCJMb2dpbiI6IkFCT1RIRVQiLCJSb2xlcyI6WzBdLCJDdXJyZW50SXAiOiIwLjAuMC4xIiwiZXhwIjoxNzA3ODAzODgwLjB9.hTj6ULMt4hfamSCHNYUtCkWG691GtwfY9xRS-bVHUi8
+
+###
+
+DELETE {{ClipUp_HostAddress}}/api/Pictures/01cdb4c3-03c4-4ba0-9391-cd66c541c46f
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJJZCI6ImZmNWFmZmY5LTdkNzMtNGNiMi05Y2FlLWQ3NzJhNmVhZGU1NiIsIkVtYWlsIjoibG9scG9wQG1haWwucnUiLCJMb2dpbiI6IkFCT1RIRVQiLCJSb2xlcyI6WzBdLCJDdXJyZW50SXAiOiIwLjAuMC4xIiwiZXhwIjoxNzA3ODAzODgwLjB9.hTj6ULMt4hfamSCHNYUtCkWG691GtwfY9xRS-bVHUi8
+
+###
+
+POST {{ClipUp_HostAddress}}/api/Authentication/Logout
+
+###
+
+POST {{ClipUp_HostAddress}}/api/Authentication/Update
+
+###
+
+GET {{ClipUp_HostAddress}}/api/Profiles
+Accept: application/json
+
+###
+
+GET {{ClipUp_HostAddress}}/api/Profiles/317e79b3-1b69-49fb-a065-dfac1140e70a
+Accept: application/json
+
+###
+
+POST {{ClipUp_HostAddress}}/api/Profiles
+Accept: application/json
+Content-Type: application/json
+
+{
+  "Email": "lolpop@mail.ru",
+  "Password": "password",
+  "Login": "ABOTHET",
+  "Name": "Валерий",
+  "Surname": "Лёвин",
+  "DateOfBirth": "2024-02-11"
+}
+
+###
+
+PATCH {{ClipUp_HostAddress}}/api/DataProfiles/ff5afff9-7d73-4cb2-9cae-d772a6eade56
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJJZCI6ImZmNWFmZmY5LTdkNzMtNGNiMi05Y2FlLWQ3NzJhNmVhZGU1NiIsIkVtYWlsIjoibG9scG9wQG1haWwucnUiLCJMb2dpbiI6IkFCT1RIRVQiLCJSb2xlcyI6WzBdLCJDdXJyZW50SXAiOiIwLjAuMC4xIiwiZXhwIjoxNzA3ODAzODgwLjB9.hTj6ULMt4hfamSCHNYUtCkWG691GtwfY9xRS-bVHUi8
+
+{
+  "Login": "XlynxXx",
+  "Name": "Кирилл",
+  "Surname": "Веремьев",
+  "DateOfBirth": "2022-05-30"
+}
+
+###
+
+PATCH {{ClipUp_HostAddress}}/api/DataProfiles/317e79b3-1b69-49fb-a065-dfac1140e70a
+Accept: application/json
+Content-Type: application/json
+
+{
+  "Login": "ABOTHET",
+  "Name": "Валерий",
+  "Surname": "Лёвин",
+  "DateOfBirth": "2024-02-11"
+}
 
 ###

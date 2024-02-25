@@ -8,6 +8,9 @@ ConfigurationManager сonfiguration = builder.Configuration;
 // Добавляем сервисы
 builder.Services.AddControllers();
 builder.Services.AddApplicationContext(сonfiguration);
+builder.Services.AddProfileService();
+builder.Services.AddJwtService();
+builder.Services.AddPictureService();
 
 // Добавляем Swagger
 builder.Services.AddEndpointsApiExplorer();

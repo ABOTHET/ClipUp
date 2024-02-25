@@ -1,4 +1,6 @@
 ﻿using ClipUp.Database;
+using ClipUp.Services;
+using ClipUp.Shared.Objects.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace ClipUp.Shared.Tools.ExtensionMethods
@@ -14,6 +16,18 @@ namespace ClipUp.Shared.Tools.ExtensionMethods
             string settings = configuration.GetConnectionString("DefaultConnection")!;
             // Подключаем
             services.AddDbContext<ApplicationContext>(options => options.UseNpgsql(settings));
+        }
+        public static void AddProfileService(this IServiceCollection services)
+        {
+            services.AddScoped<IProfileService, ProfileService>();
+        }
+        public static void AddJwtService(this IServiceCollection services)
+        {
+            services.AddScoped<IJwtService, JwtService>();
+        }
+        public static void AddPictureService(this IServiceCollection services)
+        {
+            services.AddScoped<IPictureService, PictureService>();
         }
     }
 }
